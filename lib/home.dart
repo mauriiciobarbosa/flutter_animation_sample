@@ -18,6 +18,8 @@ import 'explicit/slide_transition.dart';
 import 'implicit/animated_container.dart';
 import 'implicit/animated_default_text_style.dart';
 import 'implicit/animated_size.dart';
+import 'implicit/basic_tween_animation.dart';
+import 'implicit/complex_tween_animation.dart';
 
 class Item {
   String name;
@@ -46,6 +48,8 @@ class Home extends StatelessWidget {
     Item('ScaleTransition', ScaleTransitionWidget()),
     Item('SizeTransition', SizeTransitionWidget()),
     Item('SlideTransition', SlideTransitionWidget()),
+    Item('BasicTweenAnimation', BasicTweenAnimationWidget()),
+    Item('ComplexTweenAnimation', ComplexTweenAnimationWidget()),
   ];
 
   @override
