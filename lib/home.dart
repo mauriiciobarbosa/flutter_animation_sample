@@ -1,4 +1,5 @@
 import 'package:animation_sample/explicit/decorated_box_transition.dart';
+import 'package:animation_sample/explicit/deep_dive_animation.dart';
 import 'package:animation_sample/explicit/fade_transition.dart';
 import 'package:animation_sample/implicit/animated_align.dart';
 import 'package:animation_sample/implicit/animated_cross_fade.dart';
@@ -50,6 +51,7 @@ class Home extends StatelessWidget {
     Item('SlideTransition', SlideTransitionWidget()),
     Item('BasicTweenAnimation', BasicTweenAnimationWidget()),
     Item('ComplexTweenAnimation', ComplexTweenAnimationWidget()),
+    Item('DeepDiveExplicitAnimation', DeepDiveExplicitAnimationWidget()),
   ];
 
   @override

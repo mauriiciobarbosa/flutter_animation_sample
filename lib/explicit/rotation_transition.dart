@@ -36,6 +36,7 @@ class _RotationTransitionWidgetState extends State<RotationTransitionWidget>
         child: Center(
           child: RotationTransition(
             turns: _animation,
+            alignment: Alignment.bottomLeft,
             child: Padding(
               padding: const EdgeInsets.all(8),
               child: FlutterLogo(size: 150),
