@@ -7,7 +7,7 @@ import 'model/item.dart';
 class Home extends StatelessWidget {
   final List<Item> items = [
     Item('Implicit Animations', ImplicitAnimationPortfolio()),
-    Item('Implicit Animations', ImplicitAnimationPortfolio()),
+    Item('Explicit Animations', ImplicitAnimationPortfolio()),
     Item('Challenges', ChallengeAnimationPortfolio()),
   ];
 
