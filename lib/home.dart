@@ -1,3 +1,4 @@
+import 'package:animation_sample/challenges/nu_invest_welcome_screen.dart';
 import 'package:animation_sample/explicit/decorated_box_transition.dart';
 import 'package:animation_sample/explicit/deep_dive_animation.dart';
 import 'package:animation_sample/explicit/fade_transition.dart';
@@ -52,6 +53,7 @@ class Home extends StatelessWidget {
     Item('BasicTweenAnimation', BasicTweenAnimationWidget()),
     Item('ComplexTweenAnimation', ComplexTweenAnimationWidget()),
     Item('DeepDiveExplicitAnimation', DeepDiveExplicitAnimationWidget()),
+    Item('Nu Invest Challenge', NuInvestWelcomeScreen()),
   ];
 
   @override
