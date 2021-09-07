@@ -1,21 +1,14 @@
-import 'package:animation_sample/challenges/challenge_animation_portfolio.dart';
+import 'package:animation_sample/model/item.dart';
 import 'package:flutter/material.dart';
 
-import 'implicit/implicit_animation_portfolio.dart';
-import 'model/item.dart';
-
-class Home extends StatelessWidget {
-  final List<Item> items = [
-    Item('Implicit Animations', ImplicitAnimationPortfolio()),
-    Item('Implicit Animations', ImplicitAnimationPortfolio()),
-    Item('Challenges', ChallengeAnimationPortfolio()),
-  ];
+class ChallengeAnimationPortfolio extends StatelessWidget {
+  final List<Item> items = [];
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Types of animation'),
+        title: Text('Challenges'),
       ),
       body: ListView.builder(
         itemCount: items.length,
