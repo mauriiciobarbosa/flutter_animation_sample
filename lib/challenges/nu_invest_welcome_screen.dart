@@ -12,7 +12,7 @@ class NuInvestWelcomeScreen extends StatefulWidget {
 class _NuInvestWelcomeScreenState extends State<NuInvestWelcomeScreen>
     with TickerProviderStateMixin {
   late final AnimationController _controller = AnimationController(
-    duration: Duration(seconds: 2),
+    duration: Duration(seconds: 1),
     vsync: this,
   )..forward();
   late final Animation<Offset> _animationLogo = Tween<Offset>(
@@ -20,7 +20,7 @@ class _NuInvestWelcomeScreenState extends State<NuInvestWelcomeScreen>
     end: Offset.zero,
   ).animate(CurvedAnimation(
     parent: _controller,
-    curve: Curves.easeInQuart,
+    curve: Curves.decelerate,
   ));
   late final Animation<Offset> _animationWords = Tween<Offset>(
     begin: Offset(-1.5, 0),
@@ -34,7 +34,7 @@ class _NuInvestWelcomeScreenState extends State<NuInvestWelcomeScreen>
     end: Offset.zero,
   ).animate(CurvedAnimation(
     parent: _controller,
-    curve: Curves.easeInQuart,
+    curve: Curves.decelerate,
   ));
 
   @override
