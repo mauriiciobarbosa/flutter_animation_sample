@@ -11,31 +11,42 @@ class NuInvestWelcomeScreen extends StatefulWidget {
 
 class _NuInvestWelcomeScreenState extends State<NuInvestWelcomeScreen>
     with TickerProviderStateMixin {
-  late final AnimationController _controller = AnimationController(
-    duration: Duration(seconds: 1),
-    vsync: this,
-  )..forward();
-  late final Animation<Offset> _animationLogo = Tween<Offset>(
-    begin: Offset(0, -1.5),
-    end: Offset.zero,
-  ).animate(CurvedAnimation(
-    parent: _controller,
-    curve: Curves.decelerate,
-  ));
-  late final Animation<Offset> _animationWords = Tween<Offset>(
-    begin: Offset(-1.5, 0),
-    end: Offset.zero,
-  ).animate(CurvedAnimation(
-    parent: _controller,
-    curve: Curves.easeInQuart,
-  ));
-  late final Animation<Offset> _animationButtons = Tween<Offset>(
-    begin: Offset(0, 1.8),
-    end: Offset.zero,
-  ).animate(CurvedAnimation(
-    parent: _controller,
-    curve: Curves.decelerate,
-  ));
+  late final AnimationController _controller;
+  late final Animation<Offset> _animationLogo;
+  late final Animation<Offset> _animationWords;
+  late final Animation<Offset> _animationButtons;
+
+  @override
+  void initState() {
+    super.initState();
+
+    _controller = AnimationController(
+      duration: Duration(seconds: 1),
+      vsync: this,
+    );
+    _animationLogo =
+        _createAnimation(dx: 0, dy: -1.5, curve: Curves.decelerate);
+    _animationWords =
+        _createAnimation(dx: -1.5, dy: 0, curve: Curves.easeInQuart);
+    _animationButtons =
+        _createAnimation(dx: 0, dy: 1.8, curve: Curves.decelerate);
+
+    _controller.forward();
+  }
+
+  Animation<Offset> _createAnimation({
+    required double dx,
+    required double dy,
+    required Curve curve,
+  }) {
+    return Tween<Offset>(
+      begin: Offset(dx, dy),
+      end: Offset.zero,
+    ).animate(CurvedAnimation(
+      parent: _controller,
+      curve: curve,
+    ));
+  }
 
   @override
   void dispose() {
@@ -113,7 +124,6 @@ class _NuInvestWelcomeScreenState extends State<NuInvestWelcomeScreen>
                   SizedBox(width: 16),
                   NuInvestButton(
                     text: 'Entrar',
-                    style: NuInvestButtonStyle.PRIMARY,
                     onPressed: () => Navigator.pop(context),
                   ),
                 ],

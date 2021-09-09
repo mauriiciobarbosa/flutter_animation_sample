@@ -32,15 +32,11 @@ class NuInvestButton extends StatelessWidget {
     );
   }
 
-  Color _getPrimaryColor(NuInvestButtonStyle style) {
-    return style == NuInvestButtonStyle.PRIMARY
-        ? Colors.white
-        : Colors.transparent;
-  }
+  Color _getPrimaryColor(NuInvestButtonStyle style) =>
+      style == NuInvestButtonStyle.PRIMARY ? Colors.white : Colors.transparent;
 
-  Color _getOnPrimaryColor(NuInvestButtonStyle style) {
-    return style == NuInvestButtonStyle.PRIMARY ? Colors.purple : Colors.white;
-  }
+  Color _getOnPrimaryColor(NuInvestButtonStyle style) =>
+      style == NuInvestButtonStyle.PRIMARY ? Colors.purple : Colors.white;
 }
 
 enum NuInvestButtonStyle { PRIMARY, SECONDARY }
