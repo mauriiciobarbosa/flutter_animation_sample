@@ -1,4 +1,5 @@
 import 'package:animation_sample/challenges/challenge_animation_portfolio.dart';
+import 'package:animation_sample/explicit/explicit_animation_portfolio.dart';
 import 'package:flutter/material.dart';
 
 import 'implicit/implicit_animation_portfolio.dart';
@@ -7,7 +8,7 @@ import 'model/item.dart';
 class Home extends StatelessWidget {
   final List<Item> items = [
     Item('Implicit Animations', ImplicitAnimationPortfolio()),
-    Item('Implicit Animations', ImplicitAnimationPortfolio()),
+    Item('Explicit Animations', ExplicitAnimationPortfolio()),
     Item('Challenges', ChallengeAnimationPortfolio()),
   ];
 
