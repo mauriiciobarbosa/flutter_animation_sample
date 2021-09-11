@@ -1,8 +1,12 @@
 import 'package:animation_sample/model/item.dart';
 import 'package:flutter/material.dart';
 
+import 'nu_invest_welcome_screen.dart';
+
 class ChallengeAnimationPortfolio extends StatelessWidget {
-  final List<Item> items = [];
+  final List<Item> items = [
+    Item('Nu invest Welcome Screen', NuInvestWelcomeScreen()),
+  ];
 
   @override
   Widget build(BuildContext context) {
