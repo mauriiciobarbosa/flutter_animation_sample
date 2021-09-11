@@ -97,7 +97,7 @@ class ChatMessage extends StatelessWidget {
         parent: animationController,
         curve: Curves.easeOut,
       ),
-      axisAlignment: 0,
+      axisAlignment: -1,
       child: Padding(
         padding: const EdgeInsets.symmetric(vertical: 4),
         child: Row(
